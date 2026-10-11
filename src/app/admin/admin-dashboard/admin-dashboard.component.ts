@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CounterService } from 'src/app/core/services/counter.service';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AdminDashboardComponent {
 
+  public counterService = inject(CounterService);
 }

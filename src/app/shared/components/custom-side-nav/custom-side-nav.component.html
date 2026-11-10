@@ -1,0 +1,14 @@
+<section class="side-nav-header">
+    <img [width]="profilePicSize()" [height]="profilePicSize()" src="../../../../assets/images/ronaldo.jpg" alt="">
+     <div class="header-text">
+            <h2>Your Chanel</h2>
+            <p>Hossein Tavalaei</p>
+     </div>
+</section>
+
+<mat-nav-list>
+    <a mat-list-item *ngFor="let item of menuItems()"> 
+        <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+        <span matListItemTitle>{{item.label}}</span>
+    </a>
+</mat-nav-list>

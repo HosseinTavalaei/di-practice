@@ -1,0 +1,26 @@
+<!-- toolbar -->
+<mat-toolbar class="mat-elevation-z3">
+    <button mat-icon-button (click)="collapsed.set(!collapsed())">
+        <mat-icon>
+            menu
+        </mat-icon>
+    </button>
+    <div class="spacer"></div>
+        <span class="user-name">
+            Hossein Tavalaei
+        </span>
+        <div class="profile-avatar-container">
+            <img class="profile-image" src="#" alt="">
+        </div>
+</mat-toolbar>
+
+<!-- side bar menu  -->
+<mat-sidenav-container>
+    <mat-sidenav [style.width.px]="sidenavWidth()" opened mode="side">
+        <app-custom-side-nav></app-custom-side-nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
